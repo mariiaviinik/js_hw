@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var myArr=["summer","Mariia",18,"Ukraine",2020];
+        var mySecondArr=["I'll be there","U"];
+
+        var myChangedArr=myArr.join(",");
+        console.log("Before join\n",myArr,"\nAfter join and before split\n" , myChangedArr);
+        console.log("After split\n" , myChangedArr.split(","));
+
+        console.log("Before concat\n",myArr,"\n",mySecondArr,"\nAfter concat\n", myArr.concat(mySecondArr));
+
+        console.log("Before reverse\n",myArr);
+        console.log("After reverse\n",myArr.reverse());
+
+        var sliceArr=myArr.slice(2,4);
+        console.log("Example with slice:\nMy name is ",sliceArr[1],"\nAnd I'm ",sliceArr[0],"years old :)");
+
+        mySecondArr.splice(1,0,4)
+        console.log(mySecondArr);
+
+        myArr.sort();
+        console.log("Array after sort\n", myArr);
+
+        console.log(mySecondArr);
+        mySecondArr= mySecondArr.push("Cause U're there", 4, "me", 2);
+        console.log("After push\n",mySecondArr);
+        console.log(myArr);
+
+        var lastElement=myArr.pop();
+        console.log("Example with pop\nI love ", lastElement);
+
+        var numbers=[4,5,6,7,8,9];
+        console.log("Before unshift\n",numbers);
+        numbers.unshift(1,2,3);
+        console.log("After\n", numbers);
+
+        console.log("In most countries, the age of majority is ", myArr.shift()," years old.");
+    </script>
+</body>
+
+</html>

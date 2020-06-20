@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var myList=['apples', 'strawberry','cheese','fish','chocolate'];
+        do{
+        var element=prompt("Enter word to put it in array");
+        var position=+prompt("Enter a number of word's position");
+        if(position<myList.length && position>=0)
+        {
+            myList.splice(++position,0,element);
+            console.log(myList);
+            var answ=confirm("Continue?");    
+        } else{
+            alert("Position is wrong \n Try again");
+        }
+        } while(answ==true);
+    </script>
+</body>
+</html>

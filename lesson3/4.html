@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var cities=['Paris','Oslo','New-York','Prague','Helsinki'];
+        var population=[2148000,681067,8399000,1309000,631695];
+        var common=[];
+        for(var i=0; i<cities.length; i++)
+        {
+            common[i]=new Array(2);    
+            for(var j=0; j<2; j++)
+            {
+                if(j==0)
+                {
+                    common[i][j]=cities[i];
+                } else {
+                    common[i][j]=population[i];
+                }
+            }
+        }
+        console.log(common);
+        var str = common.join();
+        console.log(str);
+    </script>
+</body>
+
+</html>
