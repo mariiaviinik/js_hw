@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #block{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            height
+            <input type="range" id="tlc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <!-- id="ttl" ttl - text top left -->
+            <span id="ttl">0</span>
+        </p>
+        <p>
+            width
+            <input type="range" id="trc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <span id="ttr">0</span>
+        </p>
+        <p>
+            bottom left corner
+            <input type="range" id="blc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <span id="tbl">0</span>
+        </p>
+        <p>
+            bottom right corner
+            <input type="range" id="brc" value="0" min="0" max="100" oninput="onRangeChange()">
+            <span id="tbr">0</span>
+        </p>                                    
+    </div>
+
+    <div id="block"></div>
+
+    <script>
+        function onSizeChange(){
+            // gets values from range inputs
+            var tlc = document.getElementById('tlc').value;
+            var trc = document.getElementById('trc').value;
+            var blc = document.getElementById('blc').value;
+            var brc = document.getElementById('brc').value;
+
+            // gets text from spans
+            var ttl = document.getElementById('ttl');
+            var ttr = document.getElementById('ttr');
+            var tbl = document.getElementById('tbl');
+            var tbr = document.getElementById('tbr');
+
+            // sets values from range inouts to spans
+            ttl.innerHTML = tlc;
+            ttr.innerHTML = trc;
+            tbl.innerHTML = blc;
+            tbr.innerHTML = brc;
+
+            // get block by id
+            var block = document.getElementById('block');
+
+            // sets pixels to corner
+
+            block.style.borderRadius = trc + "px " + tlc + "px " + blc + "px " + brc + "px ";
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show(obj)
+        {
+            var result = "";
+            for (var i in obj) 
+            {
+                if (obj.hasOwnProperty(i)) {
+                result += obj[i] + " ";
+                }
+            }           
+            var arr=result.split(" ");
+            if("salary" in employee[0])
+                alert("Name: "+arr[0]+"\nSurname: "+arr[1]+"\nAge: "+arr[2]+"\nOccupation: "+arr[3]+"\nSalary: "+arr[4]);
+            else
+                alert("Name: "+arr[0]+"\nSurname: "+arr[1]+"\nAge: "+arr[2]+"\nOccupation: "+arr[3]); 
+        }
+
+         var employee=
+         [
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Director", 
+            },
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Manager", 
+            },
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Programmer", 
+            },
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Secretary", 
+            } 
+         ]
+
+         function addSalary(arr)
+         {
+           for(var i=0;i<arr.length;i++)
+           {
+              if(arr[i].occupation=="Director") arr[i].salary=3000;
+              else if (arr[i].occupation=="Manager") arr[i].salary=1500;
+              else if (arr[i].occupation=="Programmer") arr[i].salary=2000;
+              else arr[i].salary=1000;
+           }
+         }
+         addSalary(employee);
+         for(var i=0;i<employee.length;i++)
+         {
+            show(employee[i]);
+         }
+    </script> 
+</body>
+</html>

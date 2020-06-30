@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // task3
+        function show(obj)
+        {
+            alert("Name: "+arr[0]+"\nSurname: "+arr[1]+"\nAge: "+arr[2]+"\nOccupation: "+arr[3]); 
+        }
+
+        var employee=
+        [
+            {
+                name:prompt("Enter your name"), 
+                sName:prompt("Enter your surname"), 
+                age:+prompt("Enter your age"), 
+                // occupation:prompt("Enter your occupation"), 
+                occupation:"Director", 
+            },
+            {
+                name:prompt("Enter your name"), 
+                sName:prompt("Enter your surname"), 
+                age:+prompt("Enter your age"), 
+                // occupation:prompt("Enter your occupation"), 
+                occupation:"Manager", 
+            },
+            {
+                name:prompt("Enter your name"), 
+                sName:prompt("Enter your surname"), 
+                age:+prompt("Enter your age"), 
+                // occupation:prompt("Enter your occupation"), 
+                occupation:"Programmer", 
+            },
+            {
+                name:prompt("Enter your name"), 
+                sName:prompt("Enter your surname"), 
+                age:+prompt("Enter your age"), 
+                // occupation:prompt("Enter your occupation"), 
+                occupation:"Secretary", 
+            } 
+        ]
+        for(var i=0;i<employee.length;i++)
+         {
+            show(employee[i]);
+         }
+    </script>
+</body>
+</html>

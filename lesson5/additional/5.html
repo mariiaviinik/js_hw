@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var employee=
+         [
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Director", 
+            },
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Manager", 
+            },
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Programmer", 
+            },
+            {
+               name:prompt("Enter your name"), 
+               sName:prompt("Enter your surname"), 
+               age:+prompt("Enter your age"), 
+               // occupation:prompt("Enter your occupation"), 
+               occupation:"Secretary", 
+            } 
+         ]
+
+         function addSalary(arr)
+         {
+           for(var i=0;i<arr.length;i++)
+           {
+              if(arr[i].occupation=="Director") arr[i].salary=3000;
+              else if (arr[i].occupation=="Manager") arr[i].salary=1500;
+              else if (arr[i].occupation=="Programmer") arr[i].salary=2000;
+              else arr[i].salary=1000;
+           }
+         }
+         addSalary(employee);
+         
+         function sortEmployees(arr)
+         {
+            var property=prompt("Enter property by which you want to sort information");
+            switch(property)
+            {
+               
+               case "age":arr.sort( function(a,b) {return a.age-b.age}); break;
+               case "salary":arr.sort( function(a,b) {return a.salary-b.salary}); break;
+               case "sName":
+               arr.sort( function(a,b) {
+                        var nameA = a.sName.toUpperCase(); // ignore upper and lowercase
+                        var nameB = b.sName.toUpperCase(); // ignore upper and lowercase
+                        if (nameA < nameB) {
+                            return -1;
+                        }
+                        if (nameA > nameB) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    break;
+               case "occupation":
+               arr.sort( function(a,b) {
+                        var nameA = a.occupation.toUpperCase(); // ignore upper and lowercase
+                        var nameB = b.occupation.toUpperCase(); // ignore upper and lowercase
+                        if (nameA < nameB) {
+                            return -1;
+                        }
+                        if (nameA > nameB) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    break;
+               case "name":
+               arr.sort( function(a,b) {
+                        var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                        var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                        if (nameA < nameB) {
+                            return -1;
+                        }
+                        if (nameA > nameB) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    break;
+            }
+         }
+         sortEmployees(employee);
+         console.log(employee);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //   task2
+        var calculator=
+        {
+            firstOperand:+prompt("Enter 1st operand"),
+            sign:prompt("Enter sign you wanna use"),
+            secondOperand:+prompt("Enter 2nd operand"),
+            getSum: function(a,b)
+            {
+            console.log(a+b);
+            },
+            getDif: function(a,b)
+            {
+            console.log(a-b);
+            },
+            getProduct: function(a,b)
+            {
+            console.log(a*b);
+            },
+            getQuotient: function(a,b)
+            {
+            console.log(a/b);
+            }
+        }
+        switch(calculator.sign)
+        {
+            case "+": calculator.getSum(calculator.firstOperand, calculator.secondOperand); break;
+            case "-": calculator.getDif(calculator.firstOperand, calculator.secondOperand); break;
+            case "*": calculator.getProduct(calculator.firstOperand, calculator.secondOperand); break;
+            case "/": calculator.getQuotient(calculator.firstOperand, calculator.secondOperand); break;
+        }
+
+    </script>  
+</body>
+</html>

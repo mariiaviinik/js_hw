@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getPow()
+        {
+            var num=+prompt("Enter a number");
+            var power=+prompt("Enter a power");
+            var res=num;
+            if(power)
+            {
+                for(var i=1; i<power;i++)
+                {
+                    res*=num;
+                }
+                return res;
+            } else {
+                return 1;
+            }
+        }
+        alert("You get "+getPow());
+    </script>
+</body>
+</html>

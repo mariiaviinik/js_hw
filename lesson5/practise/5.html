@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isEmpty(obj)
+        {
+            for (var test in obj)
+            {
+            if (test) return true;
+            }
+            return false;
+        }
+        var user={};
+        // user.name="John";
+        // user.surname="Smith";
+        console.log(isEmpty(user));
+    </script> 
+</body>
+</html>

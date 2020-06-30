@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //   task1
+           var point=
+           {
+              x:+prompt("Enter x"),
+              y:+prompt("Enter x"),
+              GetQuadrant: function()
+              {
+                  if(point.x>0 && point.y>0) alert("1st quadrant");
+                  else if(point.x<0 && point.y>0) alert("2nd quadrant");
+                     else if(point.x<0 && point.y<0) alert("3d quadrant");
+                        else if(point.x>0 && point.y<0) alert("4th quadrant");
+                           else alert("At the origin");
+              }
+           };
+           point.GetQuadrant();
+    </script> 
+</body>
+</html>

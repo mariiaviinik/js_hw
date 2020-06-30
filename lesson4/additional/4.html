@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function getFibonacci()
+        {
+            var fibonacci=[1,1];
+            var index=+prompt("Enter index of fibonscci number");
+            for(var i=2;i<index;i++)
+            {
+                fibonacci[i]=fibonacci[i-1]+fibonacci[i-2];
+            }
+            return fibonacci[fibonacci.length-1];
+        }
+        alert("It's "+getFibonacci()); 
+    </script> 
+</body>
+</html>

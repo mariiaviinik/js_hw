@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculate()
+        {
+            var res;
+            var operand1=prompt("Enter 1st operand");
+            var sign=prompt("Enter sign");
+            var operand2=prompt("Enter 2nd operand");
+            if (!operand1.replace(/\d/g, "").length && !operand2.replace(/\d/g, "").length && !sign.replace(/\+|\-|\*|\//g, "").length)
+            {
+                operand1=Number(operand1);
+                operand2=Number(operand2);
+                switch(sign)
+                {
+                    case "+": res=operand1+operand2; break;
+                    case "-": res=operand1-operand2; break;
+                    case "*": res=operand1*operand2; break;
+                    case "/": res=operand1/operand2; break;
+                }
+                alert("Result is "+res);
+            } else
+            {
+                alert("You've entered not a number or sign is not correct");
+            }
+        }
+        calculate();
+    </script>
+</body>
+</html>

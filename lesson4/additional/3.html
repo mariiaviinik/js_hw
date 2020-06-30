@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function game()
+        {
+            var things = ["ROCK", "PAPER", "SCISSORS"];
+            var res=["You win!!!!!", "Oh, you lose. Maybe next time)","It's dead heat. Try again"];
+            var computerChoice = things[Math.floor(Math.random()*things.length)];
+            //console.log(computerChoice);
+            var humanChoice=prompt("Rock-paper-scissors").toUpperCase();
+            //console.log(humanChoice);
+            if(!humanChoice.replace(/ROCK|PAPER|SCISSORS/g,"").length)
+            {
+                if(humanChoice==computerChoice) return res[2];
+                else 
+                {
+                    switch(humanChoice)
+                    {
+                        case things[0]: switch(computerChoice)
+                                        {
+                                            case things[1]: return res[1];
+                                            case things[2]: return res[0];
+                                        };break
+                        case things[1]: switch(computerChoice)
+                                        {
+                                            case things[0]: return res[0];
+                                            case things[2]: return res[1];
+                                        };break
+                        case things[2]: switch(computerChoice)
+                                        {
+                                            case things[0]: return res[1];
+                                            case things[1]: return res[0];
+                                        };break
+                    }
+                }
+            }
+        }
+        alert(game());
+    </script>
+</body>
+</html>
