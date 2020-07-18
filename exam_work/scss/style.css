@@ -776,6 +776,10 @@
   margin: 15px 0 0 15px;
 }
 
+.catalog-item:hover{
+  cursor: pointer;
+}
+
 .catalog-item a {
   position: absolute;
   display: block;
