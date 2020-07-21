@@ -15,6 +15,10 @@ var leftSlide = document.querySelector(".left-arrow");
 var rightSlide = document.querySelector(".right-arrow");
 var bgSlide = document.querySelector(".mid-bg");
 var checkedPoint = document.querySelectorAll(".butt>input");
+up.style.position="fixed";
+up.style.right="50px";
+up.style.bottom="100px";
+up.style.display="none";
 function showModal()
 {
     bgLayer.style.width="100%";
@@ -124,6 +128,15 @@ function showModal()
         window.scrollTo({top:0, behavior: 'smooth'});
     }
 
+    function showBtnUp()
+    {
+        if (document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+            up.style.display = 'block';
+        } else {
+            up.style.display = 'none';
+        }
+    }
+
     var slideIndex=1;
 
     function slideToRight()
@@ -174,3 +187,4 @@ function showModal()
     leftSlide.addEventListener("click", slideToLeft);
     rightSlide.addEventListener("click", slideToRight);
     checkedPoint.forEach(elem => elem.addEventListener("click", pointSlide));
+    window.onscroll = showBtnUp;
